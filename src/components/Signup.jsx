@@ -2,8 +2,9 @@ import "../App.css";
 
 import { useState } from "react";
 import { FaEye } from "react-icons/fa";
-import axios from "axios";
+
 import { toast } from "react-toastify";
+import api from "../services/api";
 
 function Signup({ setIsLogin }) {
   const [showPassword, setShowPassword] = useState(false);
@@ -81,7 +82,7 @@ function Signup({ setIsLogin }) {
     }
 
 
-    axios.post("http://localhost:8080/api/register", user)
+    api.post("/register", user)
       .then(() => {
         toast.success("Registration Successful!");
         setIsLogin(true);

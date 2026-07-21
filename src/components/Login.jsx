@@ -1,8 +1,9 @@
-import axios from "axios";
+
 import { useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { toast } from "react-toastify";
 import "../App.css";
+import api from "../services/api";
 function Login({ setIsLogin, setIsLoggedIn }) {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
@@ -39,7 +40,7 @@ function Login({ setIsLogin, setIsLoggedIn }) {
       email: email,
       password: password
     };
-    axios.post("http://localhost:8080/api/login", loginData)
+    api.post("/login", loginData)
       .then((response) => {
         // Handle successful login
         toast.success("Login successful!");
