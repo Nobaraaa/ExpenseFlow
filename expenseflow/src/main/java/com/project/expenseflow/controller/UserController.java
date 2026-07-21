@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://expense-flow-green.vercel.app")
+@CrossOrigin(origins = "https://expense-flow-green.vercel.app")
 public class UserController {
 
     private final UserService userService;

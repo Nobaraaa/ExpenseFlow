@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 @RequestMapping("/api/expenses")
-@CrossOrigin(origins = "http://expense-flow-green.vercel.app")
+@CrossOrigin(origins = "https://expense-flow-green.vercel.app")
 public class ExpenseController {
 
     // we use constructor
