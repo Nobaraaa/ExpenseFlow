@@ -1,12 +1,14 @@
 import "../App.css";
 
-function TransactionTable({
+import { forwardRef } from "react";
+
+const TransactionTable = forwardRef(({
   transactions,
   deleteTransaction,
   editTransaction
-}) {
+}, ref) =>  {
   return (
-    <div className="transaction-table-container">
+    <div ref={ref} id="traansaction-table" className="transaction-table-container">
       <h3>Recent Transactions</h3>
 
       <table className="transaction-table">
@@ -65,5 +67,5 @@ function TransactionTable({
     </div>
   );
 }
-
+);
 export default TransactionTable;

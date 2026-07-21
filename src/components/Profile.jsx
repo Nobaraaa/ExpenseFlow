@@ -115,15 +115,15 @@ function Profile({ setShowProfile }) {
             <>
               <div className="profile-row">
                 <label>Full Name</label>
-                <span>{profile.fullName}</span>
+                <span>{"-" + profile.fullName}</span>
               </div>
               <div className="profile-row">
                 <label>Email </label>
-                <span>{profile.email}</span>
+                <span>{"-" + profile.email}</span>
               </div>
               <div className="profile-row">
                 <label>Phone Number </label>
-                <span>{profile.phone}</span>
+                <span>{"-" + profile.phone}</span>
               </div>
             </>
           )}

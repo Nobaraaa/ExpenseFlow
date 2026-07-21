@@ -30,6 +30,8 @@ function Dashboard({ setIsLoggedIn }) {
     const [filterType, setFilterType] = useState("All");
     const [loading, setLoading] = useState(true);
     const formRef = useRef(null);
+    const tableRef =useRef(null);
+    const exportMenuRef = useRef(null);
     const [showExportMenu, setShowExportMenu] = useState(false);
 
     //put fetch data from backend
@@ -48,6 +50,34 @@ function Dashboard({ setIsLoggedIn }) {
     useEffect(() => {
         fetchExpenses();
     }, []);
+
+    useEffect(() => {
+    if (searchTerm || filterType !== "All") {
+        document.getElementById("transaction-table")?.scrollIntoView({
+            
+            behavior: "smooth",
+            block: "start",
+        });
+    }
+}, [searchTerm, filterType]);
+
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (
+      exportMenuRef.current &&
+      !exportMenuRef.current.contains(event.target)
+    ) {
+      setShowExportMenu(false);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
+
 
     //transactionn Functions
     const income = transactions
@@ -176,7 +206,7 @@ function Dashboard({ setIsLoggedIn }) {
         return matchesSearch && matchesType;
     });
     if (loading) {
-        return <div className="loading"><div className="spinner-wrap"> <div className="spinner"></div><p>Loading...</p></div></div>;
+        return <div className="loading"><div className="spinner-wrapper"> <div className="spinner"></div><p>Loading...</p></div></div>;
     }
 
     return (
@@ -206,7 +236,7 @@ function Dashboard({ setIsLoggedIn }) {
                         <option value="Income">Income</option>
                         <option value="Expense">Expense</option>
                     </select>
-                    <div className="export-container">
+                    <div className="export-container" ref={exportMenuRef}>
                         <button className="export-btn" onClick={() => setShowExportMenu(!showExportMenu)}><FiUpload /></button>
                         {showExportMenu && (
                             <div className="export-menu">
@@ -239,7 +269,7 @@ function Dashboard({ setIsLoggedIn }) {
                 <TransactionForm addTransaction={addTransaction} formData={formData} setFormData={setFormData} editIndex={editIndex} formRef={formRef} />
                 <ExpenseChart income={income} expense={expense} />
             </div>
-            <TransactionTable transactions={filteredTransactions} deleteTransaction={deleteTransaction} editTransaction={editTransaction} />
+            <TransactionTable transactions={filteredTransactions} deleteTransaction={deleteTransaction} editTransaction={editTransaction}  ref ={tableRef}/>
             <footer className="footer">
                 <p>© 2026 ExpenseFlow | Built with ❤️ using React & Spring Boot</p>
             </footer>
