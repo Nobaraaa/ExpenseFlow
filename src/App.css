@@ -368,7 +368,7 @@ a:hover {
    TRANSACTION TABLE*/
 .transaction-table-container {
   width: 95.5%;
-  box-sizing: border-box;
+  
   background: white;
   padding: 25px;
   border-radius: 16px;
@@ -517,6 +517,11 @@ a:hover {
     text-align: center;
     align-items: center;
   }
+  .logout-btn{
+    display: block;
+    width: 180px;
+    margin: 15px auto 0;
+  }
 
   .transaction-table-container {
     padding: 20px;
@@ -542,10 +547,26 @@ a:hover {
 .summary-card1 h2{
   font-size: 24px;
 }
-  .profile-card {
-    padding: 20px;
-    border-radius: 15px;
+
+
+  .profile-container{
+    padding: 10px;
+    min-height: 100vh;
   }
+
+  .profile-card{
+    margin: 10px auto;
+    min-height: 80vh;   /* makes the card taller */
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .profile-avatar{
+    margin-bottom: 20px;
+  }
+
+  
+  
 
   .profile-row {
     display: flex;
@@ -567,7 +588,7 @@ a:hover {
     
   .back-arrow{
     position: fixed;
-    top: 15px;
+    top: 10px;
     left: 10px;
     z-index: 1000;
 
@@ -576,15 +597,19 @@ a:hover {
     padding: 15px;
     
   }
+  .filter-dropdown{
+    width: 90px;
+  }
   .search-box{
     flex: 1;
-    min-width: 120px;
+    min-width: 180px;
   }
   .header-actions {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 
 
 }
