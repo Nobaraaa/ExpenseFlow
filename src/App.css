@@ -509,7 +509,11 @@ a:hover {
 }
 
 @media (max-width:600px) {
+ *{
+  background-color: pink;
+  
 
+ }
   .dashboard {
     padding: 15px;
   }
@@ -517,10 +521,17 @@ a:hover {
     text-align: center;
     align-items: center;
   }
+  .dashboard-header p{
+    font-size: 16px;
+  }
+  .dashboard-header h1{
+    font-size: 34px;
+  }
   .logout-btn{
-    display: block;
-    width: 180px;
+    
+    width: 100%;
     margin: 15px auto 0;
+    
   }
 
   .transaction-table-container {
@@ -556,7 +567,7 @@ a:hover {
 
   .profile-card{
     margin: 10px auto;
-    min-height: 80vh;   /* makes the card taller */
+    min-height: calc(100vh - 60px);   /* makes the card taller */
     padding: 20px;
     border-radius: 18px;
   }
@@ -840,6 +851,12 @@ a:hover {
   justify-content: center;
   align-items: center;
   color: white;
+}
+.loading p{
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 15px;
+  color: whitesmoke;
 }
 
 .spinner-wrapper {
