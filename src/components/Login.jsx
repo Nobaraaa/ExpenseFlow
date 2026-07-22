@@ -81,7 +81,7 @@ function Login({ setIsLogin, setIsLoggedIn }) {
         </div>
         <br /> <br />
         <button className="click" onClick={handleLogin}>Login</button>
-        <p className="Signup-text">Don't have an account ? <a
+        <p className="signup-text">Don't have an account ? <a
           href="#"
           onClick={(e) => {
             e.preventDefault();

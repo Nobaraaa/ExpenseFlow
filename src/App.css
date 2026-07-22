@@ -523,6 +523,18 @@ a:hover {
   .dashboard-header h1{
     font-size: 34px;
   }
+  .container{
+    min-height:100vh;
+    height:auto;
+    align-items:center;
+    padding:20px;
+    box-sizing:border-box;
+}
+.card{
+    width:100%;
+    max-width:380px;
+    margin:0 auto;
+}
   .logout-btn{
     
     width: 80%;
@@ -617,12 +629,32 @@ a:hover {
   .profile-row {
     display: flex;
     align-items: center;
-    gap :15px;
+    gap :24px;
+}
+
+.empty-chart{
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.empty-chart p{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.empty-chart span{
+    font-size: 16px;
+    color: #666;
 }
 
 .profile-row label {
-    width: 120px;
+    width: 130px;
     font-weight: 600;
+    flex-shrink: 0;
     color: #bdbdbd;
 }
 
@@ -876,24 +908,28 @@ a:hover {
 }
 
 .loading {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
+  gap: 12px;
 }
 .loading p{
   font-size: 18px;
   font-weight: 600;
   margin-top: 15px;
   color: whitesmoke;
+  justify-content: center;
+  
 }
 
 .spinner-wrapper {
   position: relative;
   width: 90px;
   height: 90px;
+  margin-bottom: 12px;
 }
 
 .spinner {
@@ -978,4 +1014,22 @@ a:hover {
 
 .export-menu button:hover {
   background: #f3f4f6;
+}
+.empty-chart{
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.empty-chart p{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.empty-chart span{
+    font-size: 16px;
+    color: #666;
 }

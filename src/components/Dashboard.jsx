@@ -206,7 +206,7 @@ useEffect(() => {
         return matchesSearch && matchesType;
     });
     if (loading) {
-        return <div className="loading"><div className="spinner-wrapper"> <div className="spinner"></div><p>Loading...</p></div></div>;
+        return <div className="loading"><div className="spinner-wrapper"> <div className="spinner"></div><p>Please Wait..</p></div></div>;
     }
 
     return (
