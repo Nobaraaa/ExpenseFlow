@@ -552,55 +552,89 @@ a:hover {
     margin-bottom: 6px;
      
   }
+  .edit-profile-btn, 
+  .cancel-btn{
+    width: 100%;
+    margin-top: 18px;
+  }
 .summary-card1 h2{
   font-size: 24px;
 }
 
 
   .profile-container{
-    padding: 10px;
+    padding: 20px;
     min-height: 100vh;
+    background:#121212 ;
   }
 
   .profile-card{
-    margin: 10px auto;
-    min-height: calc(100vh - 60px);   /* makes the card taller */
-    padding: 20px;
-    border-radius: 18px;
+   box-sizing: border-box;
+    width: 100%;  /* makes the card taller */
+    min-height: 540px;
+    max-width: 900px;
+    padding: 30px;
+    margin: 30px auto;
+  
+    border-radius: 20px;
+    background: #1f1f1f;
   }
 
   .profile-avatar{
     margin-bottom: 20px;
   }
+  .profile-details{
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+.profile-header{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    margin-bottom:20px;
+}
 
-  
-  
+.profile-header h2{
+    color:white;
+    font-size:2rem;
+    font-weight:700;
+}
+
+.back-arrow{
+    position:absolute;
+    left:0;
+    background:none;
+    border:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
 
   .profile-row {
     display: flex;
     align-items: center;
-    margin-bottom: 18px;
+    gap :15px;
 }
 
 .profile-row label {
-    width: 150px;
+    width: 120px;
     font-weight: 600;
-    color: #555;
+    color: #bdbdbd;
 }
 
 .profile-row span {
     flex: 1;
-    font-size: 17px;
-    color: #222;
+    text-align: left;
+    color: whitesmoke;
+    font-weight: 500;
+    overflow-wrap: break-word ;
 }
     
-  .back-arrow{
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-
-  }
+  
   .chart-container{
     padding: 15px;
     
@@ -623,7 +657,7 @@ a:hover {
 }
 }
 
-/*profile */
+
 .header-actions {
   display: flex;
   gap: 15px;
