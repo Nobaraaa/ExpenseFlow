@@ -69,7 +69,7 @@ function Profile({ setShowProfile }) {
       });
   };
   if (loading) {
-    return <div className="loading"><div className="spinner-wrapper"><div className="spinner"></div></div><h3>Loading...</h3></div>;
+    return <div className="loading"><div className="spinner-wrapper"><div className="spinner"></div></div><h3>Please Wait...</h3></div>;
   }
   return (
     <div className="profile-container">
