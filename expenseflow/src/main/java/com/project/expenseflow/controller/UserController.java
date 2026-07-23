@@ -9,10 +9,6 @@ import com.project.expenseflow.dto.LoginRequest;
 import com.project.expenseflow.dto.UserProfileDto;
 import com.project.expenseflow.entity.User;
 import com.project.expenseflow.service.UserService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
 @RequestMapping("/api")
@@ -25,10 +21,16 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping("/register")
-    public User registerUser(@RequestBody User user) {
-        return userService.registerUser(user);
+   @PostMapping("/register")
+public ResponseEntity<?> registerUser(@RequestBody User user) {
+
+    try {
+        return ResponseEntity.ok(userService.registerUser(user));
+    } catch (RuntimeException e) {
+        return ResponseEntity.badRequest().body(e.getMessage());
     }
+
+}
 
     @PostMapping("/login")
     public ResponseEntity<?> loginUser(@RequestBody LoginRequest loginRequest) {

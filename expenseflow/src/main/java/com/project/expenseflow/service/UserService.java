@@ -20,8 +20,13 @@ public class UserService {
     }
 
     public User registerUser(User user) {
-        return userRepository.save(user);
+
+    if (userRepository.findByEmail(user.getEmail()).isPresent()) {
+        throw new RuntimeException("Email already exists");
     }
+
+    return userRepository.save(user);
+}
 
     public Optional<User> loginUser(String email, String password) {
         Optional<User> user = userRepository.findByEmail(email);
