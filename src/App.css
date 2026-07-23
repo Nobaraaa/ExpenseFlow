@@ -692,7 +692,7 @@ a:hover {
 }
 }
 
-@media(min-width:430px) and (max-width:450px){
+@media(min-width:430px) and (max-width:467px){
   .profile-row label{
     width: 130px;
   }
