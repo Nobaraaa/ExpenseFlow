@@ -84,7 +84,7 @@ a:hover {
 
 .signup-text {
   margin-bottom: 30px;
-  font-size: 10px;
+  font-size: 14px;
   color: #444;
   ;
 }
@@ -652,7 +652,7 @@ a:hover {
 }
 
 .profile-row label {
-    width: 130px;
+    width: 135px;
     font-weight: 600;
     flex-shrink: 0;
     color: #bdbdbd;
@@ -662,8 +662,8 @@ a:hover {
     flex: 1;
     text-align: left;
     color: whitesmoke;
-    font-weight: 500;
-    overflow-wrap: break-word ;
+    font-size: 16px;
+    overflow-wrap: anywhere ;
 }
     
   

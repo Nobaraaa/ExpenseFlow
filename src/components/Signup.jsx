@@ -130,7 +130,7 @@ function Signup({ setIsLogin }) {
         </div>
         <br /> <br />
         <button className="click1" onClick={handleSignup}>Create Account</button>
-        <p className="Signup-text">Already have an account ? <a
+        <p className="signup-text">Already have an account ? <a
           href="#"
           onClick={(e) => {
             e.preventDefault();
