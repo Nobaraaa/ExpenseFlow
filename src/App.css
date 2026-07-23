@@ -626,12 +626,27 @@ a:hover {
     cursor:pointer;
 }
 
-  .profile-row {
+  .profile-row{
     display: flex;
-    align-items:start;
-    column-gap: 10px;
-    grid-template-columns: 95px 1fr;
-    margin-bottom:22px;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.profile-row label{
+    width: 120px;
+    flex-shrink: 0;
+    color: #bdbdbd;
+    font-weight: 600;
+}
+
+.profile-row span{
+    flex: 1;
+    text-align: left;
+    font-size: 16px;
+    color: whitesmoke;
+    overflow-wrap: anywhere;
 }
 
 .empty-chart{
@@ -653,20 +668,6 @@ a:hover {
     color: #666;
 }
 
-.profile-row label {
-    width: auto;
-    font-weight: 600;
-    flex-shrink: 0;
-    color: #bdbdbd;
-}
-
-.profile-row span {
-    
-  
-    color: whitesmoke;
-    font-size: 16px;
-    word-break: break-all;
-}
     
   
   .chart-container{
@@ -689,6 +690,12 @@ a:hover {
 
 
 }
+}
+
+@media(min-width:430px) and (max-width:450px){
+  .profile-row label{
+    width: 130px;
+  }
 }
 
 
