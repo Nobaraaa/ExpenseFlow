@@ -613,7 +613,7 @@ a:hover {
 .profile-header h2{
     color:white;
     font-size:2rem;
-    font-weight:600;
+    font-weight:500;
 }
 
 .back-arrow{
@@ -629,6 +629,7 @@ a:hover {
   .profile-row {
     display: flex;
     align-items:center;
+    grid-template-columns: 110px 1fr;
     gap :15px;
 }
 
@@ -663,7 +664,7 @@ a:hover {
     text-align: left;
     color: whitesmoke;
     font-size: 16px;
-    overflow-wrap: anywhere;
+    word-break: break-word;
 }
     
   

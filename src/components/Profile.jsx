@@ -75,7 +75,7 @@ function Profile({ setShowProfile }) {
     <div className="profile-container">
       <div className="profile-header">
         <button className="back-arrow" onClick={() => setShowProfile(false)}> ← </button>
-        <h2>My Profile
+        <h2> {isEditing ? "Edit Profile " : "My Profile"}
         </h2>
       </div>
       <div className="profile-card">
