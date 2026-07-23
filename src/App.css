@@ -628,8 +628,8 @@ a:hover {
 
   .profile-row {
     display: flex;
-    align-items: flex-start;
-    gap :20px;
+    align-items:center;
+    gap :15px;
 }
 
 .empty-chart{
@@ -652,7 +652,7 @@ a:hover {
 }
 
 .profile-row label {
-    width: 120px;
+    width: 93px;
     font-weight: 600;
     flex-shrink: 0;
     color: #bdbdbd;
@@ -663,7 +663,7 @@ a:hover {
     text-align: left;
     color: whitesmoke;
     font-size: 16px;
-    word-break: break-all;
+    overflow-wrap: anywhere;
 }
     
   
