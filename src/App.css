@@ -628,9 +628,10 @@ a:hover {
 
   .profile-row {
     display: flex;
-    align-items:center;
-    grid-template-columns: 110px 1fr;
-    gap :15px;
+    align-items:start;
+    column-gap: 10px;
+    grid-template-columns: 95px 1fr;
+    margin-bottom:22px;
 }
 
 .empty-chart{
@@ -653,18 +654,18 @@ a:hover {
 }
 
 .profile-row label {
-    width: 93px;
+    width: auto;
     font-weight: 600;
     flex-shrink: 0;
     color: #bdbdbd;
 }
 
 .profile-row span {
-    flex: 1;
-    text-align: left;
+    
+  
     color: whitesmoke;
     font-size: 16px;
-    word-break: break-word;
+    word-break: break-all;
 }
     
   
